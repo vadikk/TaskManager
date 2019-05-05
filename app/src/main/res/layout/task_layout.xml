@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/nameTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Meetings with clients for discussing a new"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/line_1"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/dueToTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/nameTask"
+            app:layout_constraintTop_toBottomOf="@+id/nameTask"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Due to 02/19/19"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    <ImageView
+            android:id="@+id/arrowUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow_up"
+            app:layout_constraintStart_toEndOf="@+id/dueToTextView"
+            app:layout_constraintTop_toTopOf="@id/dueToTextView"
+            app:layout_constraintBottom_toBottomOf="@id/dueToTextView"
+            android:layout_marginStart="16dp"/>
+
+    <TextView
+            android:id="@+id/priorityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arrowUp"
+            app:layout_constraintTop_toTopOf="@id/dueToTextView"
+            tools:text="High"/>
+
+    <ImageButton
+            android:id="@+id/goToDetailInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/arrow_right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
